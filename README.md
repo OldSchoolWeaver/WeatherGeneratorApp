@@ -32,7 +32,8 @@ The WeatherGerneratorAPP produces a csv file as an outcome. The csv is described
      Melbourne -37.83,144.98,7 2015-12-25 02:30:55 Snow -5.3 998.4 55
      Adelaide -34.92,138.62,48 2016-01-04 23:05:37 Sunny +39.4 1114.1 12
 
-Where
+Where: 
+
      • Location is an optional label describing one or more positions
      • Position is a comma-separated triple containing latitude, longitude, and elevation in metres above sea
         level
