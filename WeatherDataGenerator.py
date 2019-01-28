@@ -14,11 +14,18 @@ import sys
 
 
 class WeatherData():
+    '''
+        Creates a historical weather data for specific locations
+    '''
     
     def __init__(self,google_api_key,dark_sky_api_key):
         
         '''
-        This __init__ function runs when the class is initiated
+        Initiates a WeatherData Object
+
+        Args:
+            google_api_key: key to access google API
+            dark_sky_api_key: key to access dark sky API
         '''
         self.google_api_key=google_api_key
         self.dark_sky_api_key=dark_sky_api_key

@@ -35,6 +35,7 @@ def RunSimulation():
                      sep='|',
                      encoding='utf-8'
                     )
+        print('Simulation run successfully at: ', datetime.datetime.now().replace(microsecond=0).isoformat())
     except:
         print('Error running the weather simulator')
 
@@ -68,9 +69,9 @@ def LoadHistoricalData(google_api_key,dark_sky_api_key):
 if __name__ == '__main__':
     
     #Run Simulation
-    #RunSimulation()
+    RunSimulation()
     
     #Load historical data
     google_api_key='AIzaSyAu73Qvrzp0OXJ6ORV33VhWj5WlCEBZJes'
     dark_sky_api_key='66d42558987e734a3726c461f576cd13'
-    LoadHistoricalData(google_api_key,dark_sky_api_key)
+    #LoadHistoricalData(google_api_key,dark_sky_api_key)

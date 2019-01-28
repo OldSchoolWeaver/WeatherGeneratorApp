@@ -47,7 +47,6 @@ def load_csvFile(file_location, file_name,sep,encoding):
     """
     try:
         fullpath=file_location+file_name
-        print(fullpath)
         df = pd.read_csv(fullpath, encoding=encoding,sep=sep)
         return df
     except IOError:

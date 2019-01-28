@@ -2,3 +2,4 @@ numpy==1.16.0
 pandas==0.24.0
 python-forecastio==1.4.0
 requests==2.21.0
+pytest==4.1.1

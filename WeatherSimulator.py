@@ -10,23 +10,27 @@ import sys
 
 class WeatherSimulation():
     '''
-    Initialise state for an instance of a weather simulation.
+        Creates a weather simulation given a random date for specific locations
     '''
+    
     def __init__(self):
-            self.df_historical_data = load_csvFile('Data/', 
-                                                   'Locations_HistoricalData.csv', 
-                                                    encoding = 'UTF-8', 
-                                                    sep = '|'
-                                                   )
+
+        '''
+        Initialise state for an instance of a weather simulation.
+        '''
+        self.df_historical_data = load_csvFile('Data/', 
+                                                'Locations_HistoricalData.csv', 
+                                                encoding = 'UTF-8', 
+                                                sep = '|'
+                                                )
     
     def generate(self, random_date):
         
         """
-        This function receives a data frame with the weather historical data 
-        and random data. It uses an algorithm to do a Linear Interpolation (formula below) to 
-        predict the weather values for that random date. The idea of this simulation is to create 
-        values for that specific random date within the intervals of the values of the historical 
-        data data set.
+        This function generates weather values for 10 sites consistent with their geographical 
+        location and the period of the year. It uses an algorithm to do a Linear Interpolation 
+        (formula below) to generate "real" weather values, using random numbers, from a limited 
+        historical data set.   
         The function returns a data frame with the weather forecast for that specific date for each
         location.
         Linear Interpolation Formula:  y= y0 + (y1-y0)*((x-x0)/(x1-x0))
@@ -35,7 +39,7 @@ class WeatherSimulation():
         Returns:
         df_simulation : pandas data frame with the forecast of the data for each location 
         
-        """
+        """        
 
         random_date=random_date
         month = random_date.month
@@ -90,12 +94,17 @@ class WeatherSimulation():
             else:
                 condition = 'Sunny'
             
+            if round(temperature,1) > 0:
+                temperature_str = '+' + str(round(temperature,1))
+            else:
+                temperature_str = str(round(temperature,1))    
+
             df_simulation = df_simulation.append(
                                                     {'Location': city, 
                                                      'Position': position,
                                                      'LocalTime': random_date.isoformat(),
                                                      'Conditions': condition,
-                                                     'Temperature': round(temperature,1),
+                                                     'Temperature': temperature_str,
                                                      'Humidity': int(humidity),
                                                      'Pressure': round(pressure,1)   
                                                     }, ignore_index=True 
