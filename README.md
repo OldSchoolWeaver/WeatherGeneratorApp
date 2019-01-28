@@ -8,22 +8,25 @@ The weather generator is a python application that retrieves data from bellow AP
      • https://maps.googleapis.com/maps/api/geocode/json
      • https://api.darksky.net/forecast/'
 
-The google APIs provide the data for the coordinates and also for the elevation of each of the locations that 
-are described in Locations.csv (Data folder). The Darksky API provides the historical weather data for the correspondent 
-locations.
+The google APIs provide the data for the coordinates and also for the elevation of each of the 
+locations that are described in Locations.csv (Data folder). The Darksky API provides the historical 
+weather data for the correspondent locations.
 
 There are five python scripts in this application:
 
-      WeatherDataGenerator - Script responsible to create the historical data set combining the data from the 3 APIs 
-                           mentioned above.This script will create a csv output called Locations_HistoricalData.csv in 
-                           the Data folder.
+      WeatherDataGenerator - Script responsible to create the historical data set combining the data 
+                             from the 3 APIs mentioned above.This script will create a csv output 
+                             called Locations_HistoricalData.csv in the Data folder.
 
-      WeatherSimulator - Script responsible to predict the weather forecast given a random date. It uses a Liner Interpolation
-                       formula to create a set of values based on the historical dataset. This script will create a csv output called weatherforecast_simulation.csv in the Simulations folder.
+      WeatherSimulator - Script responsible to predict the weather forecast given a random date. 
+                         It uses a Liner Interpolation formula to create a set of values based on 
+                         the historical dataset. This script will create a csv output called 
+                         weatherforecast_simulation.csv in the Simulations folder.
 
       Aux - Script that has re-usable functions that are used across different scripts.                     
 
-      Run - Script that initiates the simulation, or if required generates a new set of historical data. (The darksky API has limit of          1000 calls per day)
+      Run - Script that initiates the simulation, or if required generates a new set of historical 
+            data. (The darksky API has limit of 1000 calls per day)
 
       UnitTest - Script to initiates 6 unit test on the simulation data set.   
 
@@ -37,8 +40,8 @@ The WeatherGerneratorAPP produces a csv file as an outcome. The csv is described
 Where: 
 
      • Location is an optional label describing one or more positions
-     • Position is a comma-separated triple containing latitude, longitude and elevation in metres above sea
-        level
+     • Position is a comma-separated triple containing latitude, longitude and elevation 
+       in metres above sea level
      • Local time is an ISO8601 date time
      • Conditions are either Snow, Rain, Sunny
      • Temperature is in °C
@@ -57,8 +60,8 @@ The weather generator application requires python3 to be installed and the follo
 
 ## Build:
 
-Git Clone the repository into your local machine. Ensure that Python3 is installed if the above dependencies are not 
-installed just execute the following command:
+Git Clone the repository into your local machine. Ensure that Python3 is installed if the above 
+dependencies are not installed just execute the following command:
 
      pip3 install -r requirements.txt
 
