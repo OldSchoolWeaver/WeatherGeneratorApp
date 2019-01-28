@@ -46,6 +46,7 @@ Where:
 ## Dependencies:
 
 The weather generator application requires python3 to be installed and the following packages:
+
      • numpy==1.16.0
      • pandas==0.26.0
      • python-forecastio==1.4.0
@@ -55,10 +56,12 @@ The weather generator application requires python3 to be installed and the follo
 
 Git Clone the repository into your local machine. Ensure that Python3 is installed, if the above dependencies are not 
 installed just execute the following command:
+
      pip3 install -r requirements.txt
 
 ## Run the application
 
 CD into the WeatherGeneratorApp directory and run the the following command:
+
      python3 Run.py
 
