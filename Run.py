@@ -29,6 +29,8 @@ def RunSimulation():
     #Run and save the simulation
     try:
         df = weather_simulation.generate(random_date)
+        print(df.columns)
+        print(df)
         save_csvFile(df=df,
                      file_location='Simulations/',
                      file_name='weatherforecast_simulation.csv',

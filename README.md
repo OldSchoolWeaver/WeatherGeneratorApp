@@ -26,7 +26,8 @@ There are five python scripts in this application:
       Aux - Script that has re-usable functions that are used across different scripts.                     
 
       Run - Script that initiates the simulation, or if required generates a new set of historical 
-            data. (The darksky API has limit of 1000 calls per day)
+            data. (The darksky API has limit of 1000 calls per day).
+            To Initiate the Simulation run the Run.py script 
 
       UnitTest - Script to initiates 6 unit test on the simulation data set.   
 

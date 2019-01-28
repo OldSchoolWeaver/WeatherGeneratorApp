@@ -30,12 +30,21 @@ class WeatherSimulation():
         This function generates weather values for 10 sites consistent with their geographical 
         location and the period of the year. It uses an algorithm to do a Linear Interpolation 
         (formula below) to generate "real" weather values, using random numbers, from a limited 
-        historical data set.   
+        historical data set.
+        A simulation is performed. A specific number is generated from the possible dates of the 
+        historical data set. Once this number is generated the function sets the values for all the 
+        features in this data set.
         The function returns a data frame with the weather forecast for that specific date for each
         location.
         Linear Interpolation Formula:  y= y0 + (y1-y0)*((x-x0)/(x1-x0))
         https://en.wikipedia.org/wiki/Linear_interpolation
-                
+
+        Where:
+                y0 = Feature value for that specific year with the random date month
+                y1 = Feature value for that specific year + 1 with the random date month
+                x = random float that represents an year of the historical value (ex:2014.45)
+                x0 = int that represents the year of x
+                x1 = int that represnet the year of x+1          
         Returns:
         df_simulation : pandas data frame with the forecast of the data for each location 
         
