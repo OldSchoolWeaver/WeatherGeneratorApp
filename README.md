@@ -33,14 +33,14 @@ The WeatherGerneratorAPP produces a csv file as an outcome. The csv is described
      Adelaide -34.92,138.62,48 2016-01-04 23:05:37 Sunny +39.4 1114.1 12
 
 Where
-     • Location is an optional label describing one or more positions,
+     • Location is an optional label describing one or more positions
      • Position is a comma-separated triple containing latitude, longitude, and elevation in metres above sea
-        level,
-     • Local time is an ISO8601 date time,
-     • Conditions is either Snow, Rain, Sunny,
-     • Temperature is in °C,
-     • Pressure is in hPa, and
-     • Relative humidity is a %.
+        level
+     • Local time is an ISO8601 date time
+     • Conditions are either Snow, Rain, Sunny
+     • Temperature is in °C
+     • Pressure is in hPa
+     • Relative humidity is a %
 
 ## Dependencies:
 
