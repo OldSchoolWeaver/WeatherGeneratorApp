@@ -53,11 +53,17 @@ def LoadHistoricalData(google_api_key,dark_sky_api_key):
     #Load historical data
 
     try:
+        #Creates a weather_historical_data object
         weather_historical_data=WeatherData(google_api_key,dark_sky_api_key)
+        #Returns a pandas data frame with locations
         df_locations=weather_historical_data.loadLocations()
+        #Returns a pandas data frame with the coordinates of the locations
         df_geographic_coordinates=weather_historical_data.generateGeographicCoordinates(df_locations)
+        #Returns a pandas data frame with the elevation of the locations
         df_geographic_elevation=weather_historical_data.generateGeographicElevation(df_geographic_coordinates)
+        #Returns a pandas data frame with historical weather data of the locations
         df_historical_data=weather_historical_data.generateHistoricalData(df_geographic_elevation)
+        #Saves the data frame into a csv
         save_csvFile(df=df_historical_data,
                      file_location='Data/',
                      file_name='Locations_HistoricalData.csv',

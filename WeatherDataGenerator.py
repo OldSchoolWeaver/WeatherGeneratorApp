@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding: utf-8
 
 
@@ -161,7 +161,7 @@ class WeatherData():
         url_darksky='https://api.darksky.net/forecast/'
         
         start_date = datetime.datetime.strptime("2014-01-01 00:00:00", '%Y-%m-%d %H:%M:%S')
-        end_date = datetime.datetime.strptime("2014-02-01 00:00:00", '%Y-%m-%d %H:%M:%S')
+        end_date = datetime.datetime.strptime("2018-12-01 00:00:00", '%Y-%m-%d %H:%M:%S')
         
          
         cols = ['Location','Position','Year','Month','LocalTime','Conditions','Temperature','Pressure','Humidity']
