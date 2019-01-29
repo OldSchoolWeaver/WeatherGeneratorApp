@@ -60,7 +60,7 @@ def LoadHistoricalData(google_api_key,dark_sky_api_key):
         df_historical_data=weather_historical_data.generateHistoricalData(df_geographic_elevation)
         save_csvFile(df=df_historical_data,
                      file_location='Data/',
-                     file_name='Locations_HistoricalData_TEST.csv',
+                     file_name='Locations_HistoricalData.csv',
                      sep='|',
                      encoding='utf-8'
                     )
@@ -73,7 +73,4 @@ if __name__ == '__main__':
     #Run Simulation
     RunSimulation()
     
-    #Load historical data
-    google_api_key='AIzaSyAu73Qvrzp0OXJ6ORV33VhWj5WlCEBZJes'
-    dark_sky_api_key='66d42558987e734a3726c461f576cd13'
-    #LoadHistoricalData(google_api_key,dark_sky_api_key)
+    
