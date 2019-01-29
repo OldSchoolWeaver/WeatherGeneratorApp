@@ -14,7 +14,7 @@ weather data for the correspondent locations.
 
 There are five python scripts in this application:
 
-      ***Run*** - Script that initiates the simulation, or if required generates a new set of historical 
+      __Run__ - Script that initiates the simulation, or if required generates a new set of historical 
             data. (The darksky API has limit of 1000 calls per day).
             ***To Initiate the Simulation run the Run.py script, the output of the simulation will be 
             in the folder Simulations.*** 
